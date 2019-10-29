@@ -35,7 +35,7 @@ public class MatrixMath
      *
      * @return    int[] 
      */
-    public int[] rowAve()
+    public double[] rowAve()
     {
         return null;
     }
@@ -56,7 +56,7 @@ public class MatrixMath
      *
      * @return    int[] 
      */
-    public int[] colAve()
+    public double[] colAve()
     {
         return null;
     }
