@@ -5,6 +5,7 @@
  * @author (Mr. Kim)
  * @version (October 28. 2019)
  */
+import java.util.Arrays;
 public class MatrixMathDriver
 {
     public static void main(String[] args)
@@ -18,7 +19,7 @@ public class MatrixMathDriver
 		/* TODO
 		 * Use Arrays.toString on the results below
 		 */
-        mathA.rowSum();
+        System.out.println(Arrays.toString(mathA.rowSum()));
         mathA.rowAve();
         mathA.colSum();
         mathA.colAve();
