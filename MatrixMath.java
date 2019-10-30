@@ -15,7 +15,7 @@ public class MatrixMath
      */
     public MatrixMath(int[][] data)
     {
-        int[][] data = data;
+        this.data = data;
        
     }
 
@@ -28,10 +28,10 @@ public class MatrixMath
     public int[] rowSum()
     {
         int[] rowSum = new int[3];
-        for(int r = 0; r < array.length; r++){
+        for(int r = 0; r < data.length; r++){
             int sum = 0;
-            for(int c = 0; c<array[r].length; c++){
-                sum += array[r][c];
+            for(int c = 0; c<data[r].length; c++){
+                sum += data[r][c];
             }
             rowSum[r] = sum;
         }
@@ -45,7 +45,12 @@ public class MatrixMath
      */
     public double[] rowAve()
     {
-        return null;
+        double[] rowAve = new double[data.length];
+        int[] rowSums = rowSum();
+        for(int i = 0; i<rowAve.length; i++){
+            rowAve[i] = (rowSums[i]*1.0)/data[i].length;
+        }
+        return rowAve;
     }
     
         /**
@@ -56,17 +61,30 @@ public class MatrixMath
      */
     public int[] colSum()
     {
-        return null;
+        int[] colSum = new int[3];
+        for(int c = 0; c<data.length; c++){
+            int sum = 0;
+            for(int r = 0; r<data[c].length; r++){
+                sum += data[r][c];
+            }
+            colSum[c] = sum;
+        }
+        return(colSum);
     }
     
-     /**
+    /**
      * Find the average of all the values in each row
      *
      * @return    int[] 
      */
     public double[] colAve()
     {
-        return null;
+        double[] colAve = new double[data.length];
+        int[] colSums = colSum();
+        for(int i = 0; i<colAve.length; i++){
+            colAve[i] = (colSums[i]*1.0)/data[i].length;
+        }
+        return colAve;
     }
     
 }

@@ -20,9 +20,9 @@ public class MatrixMathDriver
 		 * Use Arrays.toString on the results below
 		 */
         System.out.println(Arrays.toString(mathA.rowSum()));
-        mathA.rowAve();
-        mathA.colSum();
-        mathA.colAve();
+        System.out.println(Arrays.toString(mathA.rowAve()));
+        System.out.println(Arrays.toString(mathA.colSum()));
+        System.out.println(Arrays.toString(mathA.colAve()));
         
         MatrixMath mathB = new MatrixMath(B);
         mathB.rowSum();
